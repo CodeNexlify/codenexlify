@@ -1,0 +1,369 @@
+/**
+ * Typography Styles
+ * Font definitions and text styling
+ */
+
+// Import Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+// Base typography
+body {
+  font-family: $font-family-primary;
+  font-size: $font-size-base;
+  font-weight: $font-weight-normal;
+  line-height: $line-height-normal;
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+// Headings
+h1, h2, h3, h4, h5, h6 {
+  font-family: $font-family-heading;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-tight;
+  color: var(--text-primary);
+  margin-bottom: $spacing-md;
+  letter-spacing: $letter-spacing-tight;
+}
+
+h1 {
+  @include heading(1);
+}
+
+h2 {
+  @include heading(2);
+}
+
+h3 {
+  @include heading(3);
+}
+
+h4 {
+  @include heading(4);
+}
+
+h5 {
+  @include heading(5);
+}
+
+h6 {
+  @include heading(6);
+}
+
+// Paragraphs
+p {
+  margin-bottom: $spacing-md;
+  color: var(--text-secondary);
+  line-height: $line-height-relaxed;
+  
+  &:last-child {
+    margin-bottom: 0;
+  }
+  
+  &.lead {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-medium;
+    line-height: $line-height-relaxed;
+    color: var(--text-primary);
+  }
+  
+  &.small {
+    font-size: $font-size-sm;
+  }
+}
+
+// Links
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: $transition-fast;
+  
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    text-decoration: underline;
+  }
+  
+  &:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+}
+
+// Lists
+ul, ol {
+  margin-bottom: $spacing-md;
+  padding-left: $spacing-lg;
+  
+  li {
+    margin-bottom: $spacing-sm;
+    color: var(--text-secondary);
+    line-height: $line-height-relaxed;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+ul {
+  list-style-type: disc;
+  
+  &.unstyled {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  &.inline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+ol {
+  list-style-type: decimal;
+  
+  &.custom-counter {
+    counter-reset: custom-counter;
+    list-style: none;
+    padding-left: 0;
+    
+    li {
+      counter-increment: custom-counter;
+      position: relative;
+      padding-left: $spacing-xl;
+      
+      &::before {
+        content: counter(custom-counter);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: $spacing-lg;
+        height: $spacing-lg;
+        background: var(--primary-color);
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: $font-size-sm;
+        font-weight: $font-weight-bold;
+      }
+    }
+  }
+}
+
+// Blockquotes
+blockquote {
+  margin: $spacing-xl 0;
+  padding: $spacing-lg;
+  border-left: 4px solid var(--primary-color);
+  background: rgba(var(--primary-color), 0.05);
+  border-radius: 0 $border-radius-md $border-radius-md 0;
+  
+  p {
+    font-size: $font-size-lg;
+    font-style: italic;
+    color: var(--text-primary);
+    margin-bottom: $spacing-sm;
+    
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  
+  cite {
+    display: block;
+    margin-top: $spacing-sm;
+    font-size: $font-size-sm;
+    color: var(--text-secondary);
+    font-style: normal;
+    
+    &::before {
+      content: '— ';
+    }
+  }
+}
+
+// Code
+code {
+  font-family: $font-family-mono;
+  font-size: 0.9em;
+  background: rgba(var(--primary-color), 0.1);
+  color: var(--primary-color);
+  padding: 0.2em 0.4em;
+  border-radius: $border-radius-sm;
+  font-weight: $font-weight-medium;
+}
+
+pre {
+  font-family: $font-family-mono;
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: $border-radius-md;
+  padding: $spacing-lg;
+  margin: $spacing-lg 0;
+  overflow-x: auto;
+  line-height: $line-height-relaxed;
+  
+  code {
+    background: none;
+    color: var(--text-primary);
+    padding: 0;
+    font-size: $font-size-sm;
+  }
+}
+
+// Emphasis
+strong, b {
+  font-weight: $font-weight-bold;
+  color: var(--text-primary);
+}
+
+em, i {
+  font-style: italic;
+}
+
+mark {
+  background: rgba(var(--warning-color), 0.3);
+  color: var(--text-primary);
+  padding: 0.1em 0.2em;
+  border-radius: $border-radius-sm;
+}
+
+// Small text
+small {
+  font-size: $font-size-sm;
+  color: var(--text-light);
+}
+
+// Abbreviations
+abbr[title] {
+  border-bottom: 1px dotted var(--text-secondary);
+  cursor: help;
+  text-decoration: none;
+}
+
+// Text utilities
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-justify { text-align: justify; }
+
+.text-uppercase { text-transform: uppercase; }
+.text-lowercase { text-transform: lowercase; }
+.text-capitalize { text-transform: capitalize; }
+
+.text-primary { color: var(--text-primary) !important; }
+.text-secondary { color: var(--text-secondary) !important; }
+.text-light { color: var(--text-light) !important; }
+.text-white { color: var(--text-white) !important; }
+.text-accent { color: var(--accent-color) !important; }
+.text-success { color: var(--success-color) !important; }
+.text-warning { color: var(--warning-color) !important; }
+.text-error { color: var(--error-color) !important; }
+
+.text-gradient {
+  @include text-gradient();
+}
+
+// Font weights
+.font-light { font-weight: $font-weight-light; }
+.font-normal { font-weight: $font-weight-normal; }
+.font-medium { font-weight: $font-weight-medium; }
+.font-semibold { font-weight: $font-weight-semibold; }
+.font-bold { font-weight: $font-weight-bold; }
+.font-extrabold { font-weight: $font-weight-extrabold; }
+.font-black { font-weight: $font-weight-black; }
+
+// Font sizes
+.text-xs { font-size: $font-size-xs; }
+.text-sm { font-size: $font-size-sm; }
+.text-base { font-size: $font-size-base; }
+.text-lg { font-size: $font-size-lg; }
+.text-xl { font-size: $font-size-xl; }
+.text-2xl { font-size: $font-size-2xl; }
+.text-3xl { font-size: $font-size-3xl; }
+.text-4xl { font-size: $font-size-4xl; }
+.text-5xl { font-size: $font-size-5xl; }
+.text-6xl { font-size: $font-size-6xl; }
+
+// Line heights
+.leading-tight { line-height: $line-height-tight; }
+.leading-snug { line-height: $line-height-snug; }
+.leading-normal { line-height: $line-height-normal; }
+.leading-relaxed { line-height: $line-height-relaxed; }
+.leading-loose { line-height: $line-height-loose; }
+
+// Letter spacing
+.tracking-tighter { letter-spacing: $letter-spacing-tighter; }
+.tracking-tight { letter-spacing: $letter-spacing-tight; }
+.tracking-normal { letter-spacing: $letter-spacing-normal; }
+.tracking-wide { letter-spacing: $letter-spacing-wide; }
+.tracking-wider { letter-spacing: $letter-spacing-wider; }
+.tracking-widest { letter-spacing: $letter-spacing-widest; }
+
+// Text decoration
+.underline { text-decoration: underline; }
+.line-through { text-decoration: line-through; }
+.no-underline { text-decoration: none; }
+
+// Text overflow
+.truncate {
+  @include truncate;
+}
+
+.line-clamp-2 {
+  @include line-clamp(2);
+}
+
+.line-clamp-3 {
+  @include line-clamp(3);
+}
+
+// Responsive typography
+@include media-query('tablet') {
+  h1 { font-size: $font-size-4xl; }
+  h2 { font-size: $font-size-3xl; }
+  h3 { font-size: $font-size-2xl; }
+}
+
+@include media-query-max('mobile') {
+  h1 { font-size: $font-size-3xl; }
+  h2 { font-size: $font-size-2xl; }
+  h3 { font-size: $font-size-xl; }
+  h4 { font-size: $font-size-lg; }
+  
+  p.lead {
+    font-size: $font-size-base;
+  }
+}
+
+// Print typography
+@media print {
+  body {
+    font-size: 12pt;
+    line-height: 1.4;
+    color: black;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: black;
+    page-break-after: avoid;
+  }
+  
+  p, li {
+    orphans: 3;
+    widows: 3;
+  }
+  
+  blockquote {
+    page-break-inside: avoid;
+  }
+}

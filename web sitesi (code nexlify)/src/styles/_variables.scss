@@ -1,0 +1,240 @@
+/**
+ * SCSS Variables
+ * Global design tokens and configuration
+ */
+
+// Colors
+$primary-color: #667eea;
+$secondary-color: #764ba2;
+$accent-color: #ff6b6b;
+$success-color: #10b981;
+$warning-color: #f59e0b;
+$error-color: #ef4444;
+$info-color: #3b82f6;
+
+// Text colors
+$text-primary: #1a1a2e;
+$text-secondary: #6c7293;
+$text-light: #a8a8b3;
+$text-white: #ffffff;
+
+// Background colors
+$background-primary: #ffffff;
+$background-secondary: #f8fafc;
+$background-dark: #1a1a2e;
+$background-overlay: rgba(0, 0, 0, 0.5);
+
+// Border colors
+$border-color: #e2e8f0;
+$border-color-dark: #2d3748;
+
+// Shadow colors
+$shadow-color: rgba(0, 0, 0, 0.1);
+$shadow-color-dark: rgba(0, 0, 0, 0.3);
+
+// Gradients
+$primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+$secondary-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+$dark-gradient: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+$purple-gradient: linear-gradient(135deg, #a8edea 0%, #fed6e3 50%, #d299c2 100%);
+$orange-gradient: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+
+// Typography
+$font-family-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+$font-family-heading: 'Space Grotesk', sans-serif;
+$font-family-mono: 'Fira Code', 'Monaco', 'Consolas', monospace;
+
+// Font sizes
+$font-size-xs: 0.75rem;    // 12px
+$font-size-sm: 0.875rem;   // 14px
+$font-size-base: 1rem;     // 16px
+$font-size-lg: 1.125rem;   // 18px
+$font-size-xl: 1.25rem;    // 20px
+$font-size-2xl: 1.5rem;    // 24px
+$font-size-3xl: 1.875rem;  // 30px
+$font-size-4xl: 2.25rem;   // 36px
+$font-size-5xl: 3rem;      // 48px
+$font-size-6xl: 3.75rem;   // 60px
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$font-weight-extrabold: 800;
+$font-weight-black: 900;
+
+// Line heights
+$line-height-tight: 1.25;
+$line-height-snug: 1.375;
+$line-height-normal: 1.5;
+$line-height-relaxed: 1.625;
+$line-height-loose: 2;
+
+// Letter spacing
+$letter-spacing-tighter: -0.05em;
+$letter-spacing-tight: -0.025em;
+$letter-spacing-normal: 0;
+$letter-spacing-wide: 0.025em;
+$letter-spacing-wider: 0.05em;
+$letter-spacing-widest: 0.1em;
+
+// Spacing
+$spacing-xs: 0.25rem;   // 4px
+$spacing-sm: 0.5rem;    // 8px
+$spacing-md: 1rem;      // 16px
+$spacing-lg: 1.5rem;    // 24px
+$spacing-xl: 2rem;      // 32px
+$spacing-2xl: 3rem;     // 48px
+$spacing-3xl: 4rem;     // 64px
+$spacing-4xl: 6rem;     // 96px
+$spacing-5xl: 8rem;     // 128px
+
+// Border radius
+$border-radius-none: 0;
+$border-radius-sm: 0.25rem;   // 4px
+$border-radius-md: 0.5rem;    // 8px
+$border-radius-lg: 1rem;      // 16px
+$border-radius-xl: 1.5rem;    // 24px
+$border-radius-2xl: 2rem;     // 32px
+$border-radius-full: 9999px;
+
+// Shadows
+$shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+$shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+$shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+$shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+$shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+$shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+
+// Transitions
+$transition-fast: all 0.15s ease-in-out;
+$transition-normal: all 0.3s ease-in-out;
+$transition-slow: all 0.5s ease-in-out;
+
+// Easing functions
+$ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+$ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+$ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+$ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+$ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+$ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+
+// Z-index layers
+$z-index-dropdown: 1000;
+$z-index-sticky: 1020;
+$z-index-fixed: 1030;
+$z-index-modal-backdrop: 1040;
+$z-index-modal: 1050;
+$z-index-popover: 1060;
+$z-index-tooltip: 1070;
+$z-index-toast: 1080;
+
+// Breakpoints
+$breakpoints: (
+  'mobile': 480px,
+  'tablet': 768px,
+  'desktop': 1024px,
+  'wide': 1200px,
+  'ultrawide': 1400px
+);
+
+// Container max widths
+$container-max-widths: (
+  'mobile': 100%,
+  'tablet': 750px,
+  'desktop': 970px,
+  'wide': 1170px,
+  'ultrawide': 1370px
+);
+
+// Grid system
+$grid-columns: 12;
+$grid-gutter-width: 2rem;
+
+// Component specific variables
+$header-height: 80px;
+$header-height-mobile: 60px;
+$footer-height: 200px;
+$sidebar-width: 280px;
+
+// Button sizes
+$button-padding-sm: 0.5rem 1rem;
+$button-padding-md: 0.75rem 1.5rem;
+$button-padding-lg: 1rem 2rem;
+$button-padding-xl: 1.25rem 2.5rem;
+
+// Form elements
+$input-height-sm: 2rem;
+$input-height-md: 2.5rem;
+$input-height-lg: 3rem;
+$input-padding-x: 1rem;
+$input-padding-y: 0.5rem;
+
+// Card styles
+$card-padding: 1.5rem;
+$card-border-radius: $border-radius-lg;
+$card-shadow: $shadow-md;
+
+// Animation durations
+$animation-duration-fast: 0.15s;
+$animation-duration-normal: 0.3s;
+$animation-duration-slow: 0.5s;
+$animation-duration-slower: 1s;
+
+// Performance optimization
+$enable-rounded: true;
+$enable-shadows: true;
+$enable-gradients: true;
+$enable-transitions: true;
+$enable-reduced-motion: true;
+$enable-grid-classes: true;
+$enable-utility-classes: true;
+
+// Print styles
+$print-page-size: a4;
+$print-body-min-width: 992px;
+
+// Accessibility
+$focus-ring-width: 2px;
+$focus-ring-color: $accent-color;
+$focus-ring-offset: 2px;
+
+// Dark theme colors
+$dark-primary-color: #8b9cf7;
+$dark-secondary-color: #9f7aea;
+$dark-text-primary: #e2e8f0;
+$dark-text-secondary: #94a3b8;
+$dark-background-primary: #1a202c;
+$dark-background-secondary: #2d3748;
+$dark-border-color: #4a5568;
+
+// Component states
+$state-colors: (
+  'primary': $primary-color,
+  'secondary': $secondary-color,
+  'success': $success-color,
+  'warning': $warning-color,
+  'error': $error-color,
+  'info': $info-color
+);
+
+// Social media brand colors
+$social-colors: (
+  'facebook': #1877f2,
+  'twitter': #1da1f2,
+  'linkedin': #0077b5,
+  'github': #333333,
+  'instagram': #e4405f,
+  'youtube': #ff0000,
+  'discord': #5865f2
+);
+
+// Performance thresholds
+$performance-budget: (
+  'first-contentful-paint': 1.5s,
+  'largest-contentful-paint': 2.5s,
+  'first-input-delay': 100ms,
+  'cumulative-layout-shift': 0.1
+);

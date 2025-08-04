@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CodeNexlify İletişim - Bizimle iletişime geçin, projeleriniz için ücretsiz konsültasyon alın">
+    <title>İletişim - CodeNexlify</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Modern build integration -->
+    <script type="module" src="src/index.js"></script>
+</head>
+<body id="main-content">
+    <!-- Navigation -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <h2><i class="fas fa-code"></i> CodeNexlify</h2>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Ana Sayfa</a></li>
+                    <li><a href="about.html" class="nav-link">Hakkımızda</a></li>
+                    <li><a href="services.html" class="nav-link">Hizmetler</a></li>
+                    <li><a href="contact.html" class="nav-link active">İletişim</a></li>
+                    <li><a href="blog.html" class="nav-link">Blog</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>İletişim</h1>
+            <p>Projeleriniz için ücretsiz konsültasyon alın</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Mesaj Gönder</h2>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Ad Soyad *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-posta *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Hizmet Türü</label>
+                            <select id="service" name="service">
+                                <option value="">Seçiniz</option>
+                                <option value="web">Web Geliştirme</option>
+                                <option value="mobile">Mobil Uygulama</option>
+                                <option value="desktop">Masaüstü Uygulama</option>
+                                <option value="ai">AI Eklentileri</option>
+                                <option value="consulting">Danışmanlık</option>
+                                <option value="other">Diğer</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="budget">Bütçe Aralığı</label>
+                            <select id="budget" name="budget">
+                                <option value="">Seçiniz</option>
+                                <option value="5k-10k">5.000 - 10.000 TL</option>
+                                <option value="10k-25k">10.000 - 25.000 TL</option>
+                                <option value="25k-50k">25.000 - 50.000 TL</option>
+                                <option value="50k+">50.000 TL üzeri</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız *</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Proje detaylarınızı ve ihtiyaçlarınızı belirtiniz..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Mesaj Gönder</button>
+                    </form>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>İletişim Bilgileri</h2>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>E-posta</h4>
+                            <p>info@codenexlify.com</p>
+                            <p>support@codenexlify.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telefon</h4>
+                            <p>+90 (555) 123-4567</p>
+                            <p>+90 (555) 765-4321</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Adres</h4>
+                            <p>Teknokent Mahallesi<br>
+                            İnovasyon Caddesi No: 42<br>
+                            Şişli, İstanbul</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Çalışma Saatleri</h4>
+                            <p>Pazartesi - Cuma: 09:00 - 18:00<br>
+                            Cumartesi: 10:00 - 16:00<br>
+                            Pazar: Kapalı</p>
+                        </div>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h4>Sosyal Medya</h4>
+                        <div class="social-links" style="justify-content: flex-start;">
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-github"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Sık Sorulan Sorular</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h4>Proje süresi ne kadar sürer?</h4>
+                    <p>Proje karmaşıklığına bağlı olarak 2 hafta ile 6 ay arasında değişiklik gösterebilir. Basit web siteleri 2-4 hafta, karmaşık uygulamalar 3-6 ay sürebilir.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Ödeme koşulları nasıl?</h4>
+                    <p>Genellikle %30 peşin, %40 proje ortasında, %30 teslimat sonrası şeklinde çalışıyoruz. Küçük projeler için farklı ödeme planları da mümkündür.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Proje sonrası destek sunuyor musunuz?</h4>
+                    <p>Evet, tüm projelerimiz için 6 ay ücretsiz teknik destek ve 1 yıl güncelleme desteği sunuyoruz.</p>
+                </div>
+                <div class="faq-item">
+                    <h4>Hangi teknolojileri kullanıyorsunuz?</h4>
+                    <p>Modern teknolojileri kullanmayı tercih ediyoruz: React, Vue.js, Node.js, Python, React Native, Flutter ve birçok güncel framework.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-code"></i> CodeNexlify</h3>
+                    <p>Yenilikçi teknoloji çözümleriyle geliştiricilere ve işletmelere ilham veriyoruz.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Hizmetler</h4>
+                    <ul>
+                        <li><a href="#">Web Geliştirme</a></li>
+                        <li><a href="#">Mobil Uygulamalar</a></li>
+                        <li><a href="#">Masaüstü Yazılımlar</a></li>
+                        <li><a href="#">AI Eklentileri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Şirket</h4>
+                    <ul>
+                        <li><a href="about.html">Hakkımızda</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="#">Kariyer</a></li>
+                        <li><a href="contact.html">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>İletişim</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@codenexlify.com</p>
+                        <p><i class="fas fa-phone"></i> +90 (555) 123-4567</p>
+                        <p><i class="fas fa-map-marker-alt"></i> İstanbul, Türkiye</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeNexlify. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Legacy script for compatibility -->
+    <script src="js/script.js"></script>
+</body>
+</html> 

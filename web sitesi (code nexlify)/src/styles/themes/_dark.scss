@@ -1,0 +1,215 @@
+/**
+ * Dark Theme
+ * Dark color scheme with enhanced contrast
+ */
+
+[data-theme="dark"] {
+  // Primary colors (adjusted for dark theme)
+  --primary-color: #{$dark-primary-color};
+  --secondary-color: #{$dark-secondary-color};
+  --accent-color: #{lighten($accent-color, 10%)};
+  --success-color: #{lighten($success-color, 10%)};
+  --warning-color: #{lighten($warning-color, 10%)};
+  --error-color: #{lighten($error-color, 10%)};
+  --info-color: #{lighten($info-color, 10%)};
+  
+  // Text colors
+  --text-primary: #{$dark-text-primary};
+  --text-secondary: #{$dark-text-secondary};
+  --text-light: #{lighten($dark-text-secondary, 10%)};
+  --text-white: #{$text-white};
+  
+  // Background colors
+  --background-primary: #{$dark-background-primary};
+  --background-secondary: #{$dark-background-secondary};
+  --background-overlay: rgba(0, 0, 0, 0.7);
+  
+  // Border colors
+  --border-color: #{$dark-border-color};
+  
+  // Shadow colors
+  --shadow-color: rgba(0, 0, 0, 0.4);
+  
+  // Gradients (adjusted for dark theme)
+  --primary-gradient: linear-gradient(135deg, #{$dark-primary-color} 0%, #{$dark-secondary-color} 50%, #{lighten($dark-secondary-color, 10%)} 100%);
+  --secondary-gradient: linear-gradient(135deg, #{lighten($info-color, 10%)} 0%, #{lighten($info-color, 20%)} 100%);
+  --dark-gradient: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2a2a2a 100%);
+  --purple-gradient: linear-gradient(135deg, #{darken($dark-secondary-color, 10%)} 0%, #{$dark-secondary-color} 50%, #{lighten($dark-secondary-color, 10%)} 100%);
+  --orange-gradient: linear-gradient(135deg, #{darken($warning-color, 20%)} 0%, #{darken($warning-color, 10%)} 100%);
+  
+  // Component specific colors
+  --navbar-bg: rgba(26, 32, 44, 0.95);
+  --navbar-text: #{$dark-text-primary};
+  --navbar-border: rgba(255, 255, 255, 0.1);
+  
+  --card-bg: #{$dark-background-secondary};
+  --card-border: #{$dark-border-color};
+  --card-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  
+  --button-primary-bg: var(--primary-gradient);
+  --button-primary-text: #{$text-white};
+  --button-secondary-bg: transparent;
+  --button-secondary-text: #{$dark-primary-color};
+  --button-secondary-border: #{$dark-primary-color};
+  
+  --input-bg: #{$dark-background-secondary};
+  --input-border: #{$dark-border-color};
+  --input-text: #{$dark-text-primary};
+  --input-placeholder: #{$dark-text-secondary};
+  --input-focus-border: #{$dark-primary-color};
+  
+  --footer-bg: #{darken($dark-background-primary, 5%)};
+  --footer-text: #{$dark-text-primary};
+  
+  // State colors
+  --hover-bg: rgba(139, 156, 247, 0.1);
+  --active-bg: rgba(139, 156, 247, 0.2);
+  --focus-ring: #{$dark-primary-color};
+  
+  // Scrollbar colors
+  --scrollbar-track: rgba(255, 255, 255, 0.1);
+  --scrollbar-thumb: #{$dark-primary-color};
+  --scrollbar-thumb-hover: #{lighten($dark-primary-color, 10%)};
+}
+
+// Dark theme specific styles
+.theme-dark {
+  color-scheme: dark;
+  
+  // Enhanced contrast for better readability
+  .text-contrast {
+    color: var(--text-primary);
+  }
+  
+  // Dark theme specific components
+  .hero {
+    background: 
+      linear-gradient(135deg, rgba(139, 156, 247, 0.1) 0%, rgba(159, 122, 234, 0.1) 100%),
+      radial-gradient(circle at 20% 20%, rgba(139, 156, 247, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(159, 122, 234, 0.15) 0%, transparent 50%);
+  }
+  
+  .services-overview {
+    background: linear-gradient(135deg, #{lighten($dark-background-primary, 2%)} 0%, #{lighten($dark-background-primary, 5%)} 100%);
+  }
+  
+  .values-section {
+    background: linear-gradient(135deg, #{lighten($dark-background-primary, 2%)} 0%, #{lighten($dark-background-primary, 5%)} 100%);
+  }
+  
+  .contact-section {
+    background: linear-gradient(135deg, #{lighten($dark-background-primary, 2%)} 0%, #{lighten($dark-background-primary, 5%)} 100%);
+  }
+  
+  // Enhanced glass morphism for dark theme
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  // Code highlighting for dark theme
+  .code-block {
+    background: #{lighten($dark-background-secondary, 5%)};
+    border: 1px solid var(--border-color);
+    
+    .keyword { color: #ff7b72; }
+    .string { color: #a5d6ff; }
+    .comment { color: #8b949e; }
+    .number { color: #79c0ff; }
+    .function { color: #d2a8ff; }
+  }
+  
+  // Selection colors
+  ::selection {
+    background: rgba(139, 156, 247, 0.3);
+    color: var(--text-primary);
+  }
+  
+  ::-moz-selection {
+    background: rgba(139, 156, 247, 0.3);
+    color: var(--text-primary);
+  }
+  
+  // Image adjustments for dark theme
+  img:not([data-theme-ignore]) {
+    filter: brightness(0.9) contrast(1.1);
+  }
+  
+  // Logo adjustments
+  .logo img {
+    filter: brightness(1.2);
+  }
+  
+  // Enhanced shadows for dark theme
+  .card:hover,
+  .service-card:hover,
+  .value-card:hover {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+  
+  // Dark theme specific animations
+  @keyframes darkGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(139, 156, 247, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(139, 156, 247, 0.5);
+    }
+  }
+  
+  .glow-effect {
+    animation: darkGlow 2s ease-in-out infinite;
+  }
+  
+  // Enhanced focus styles for dark theme
+  :focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(139, 156, 247, 0.2);
+  }
+  
+  // Dark theme specific utilities
+  .bg-glass-dark {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .text-glow {
+    text-shadow: 0 0 10px rgba(139, 156, 247, 0.5);
+  }
+  
+  // Improved readability for dark theme
+  p, li, span {
+    line-height: 1.7;
+  }
+  
+  // Dark theme specific form styles
+  input, textarea, select {
+    &:focus {
+      box-shadow: 0 0 0 3px rgba(139, 156, 247, 0.2);
+    }
+  }
+  
+  // Dark theme specific button styles
+  .btn-primary {
+    box-shadow: 0 4px 15px rgba(139, 156, 247, 0.3);
+    
+    &:hover {
+      box-shadow: 0 8px 25px rgba(139, 156, 247, 0.4);
+    }
+  }
+  
+  // Dark theme specific navigation
+  .nav-link {
+    &:hover {
+      background: rgba(139, 156, 247, 0.1);
+    }
+    
+    &.active {
+      background: var(--primary-gradient);
+      box-shadow: 0 4px 15px rgba(139, 156, 247, 0.3);
+    }
+  }
+}

@@ -1,0 +1,127 @@
+/**
+ * Light Theme
+ * Default light color scheme
+ */
+
+:root,
+[data-theme="light"] {
+  // Primary colors
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --accent-color: #{$accent-color};
+  --success-color: #{$success-color};
+  --warning-color: #{$warning-color};
+  --error-color: #{$error-color};
+  --info-color: #{$info-color};
+  
+  // Text colors
+  --text-primary: #{$text-primary};
+  --text-secondary: #{$text-secondary};
+  --text-light: #{$text-light};
+  --text-white: #{$text-white};
+  
+  // Background colors
+  --background-primary: #{$background-primary};
+  --background-secondary: #{$background-secondary};
+  --background-overlay: #{$background-overlay};
+  
+  // Border colors
+  --border-color: #{$border-color};
+  
+  // Shadow colors
+  --shadow-color: #{$shadow-color};
+  
+  // Gradients
+  --primary-gradient: #{$primary-gradient};
+  --secondary-gradient: #{$secondary-gradient};
+  --dark-gradient: #{$dark-gradient};
+  --purple-gradient: #{$purple-gradient};
+  --orange-gradient: #{$orange-gradient};
+  
+  // Component specific colors
+  --navbar-bg: rgba(255, 255, 255, 0.95);
+  --navbar-text: #{$text-primary};
+  --navbar-border: rgba(255, 255, 255, 0.2);
+  
+  --card-bg: #{$background-primary};
+  --card-border: #{$border-color};
+  --card-shadow: #{$shadow-md};
+  
+  --button-primary-bg: #{$primary-gradient};
+  --button-primary-text: #{$text-white};
+  --button-secondary-bg: transparent;
+  --button-secondary-text: #{$primary-color};
+  --button-secondary-border: #{$primary-color};
+  
+  --input-bg: #{$background-primary};
+  --input-border: #{$border-color};
+  --input-text: #{$text-primary};
+  --input-placeholder: #{$text-light};
+  --input-focus-border: #{$primary-color};
+  
+  --footer-bg: #{$background-dark};
+  --footer-text: #{$text-white};
+  
+  // State colors
+  --hover-bg: rgba(102, 126, 234, 0.1);
+  --active-bg: rgba(102, 126, 234, 0.2);
+  --focus-ring: #{$primary-color};
+  
+  // Scrollbar colors
+  --scrollbar-track: rgba(0, 0, 0, 0.1);
+  --scrollbar-thumb: #{$primary-color};
+  --scrollbar-thumb-hover: #{darken($primary-color, 10%)};
+}
+
+// Light theme specific styles
+.theme-light {
+  color-scheme: light;
+  
+  // Enhanced contrast for better readability
+  .text-contrast {
+    color: var(--text-primary);
+  }
+  
+  // Light theme specific components
+  .hero {
+    background: 
+      linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%),
+      radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 119, 198, 0.2) 0%, transparent 50%);
+  }
+  
+  .services-overview {
+    background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+  }
+  
+  .values-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+  }
+  
+  .contact-section {
+    background: linear-gradient(135deg, #f8fafc 0%, #e3f2fd 100%);
+  }
+  
+  // Code highlighting for light theme
+  .code-block {
+    background: #f8f9fa;
+    border: 1px solid var(--border-color);
+    
+    .keyword { color: #d73a49; }
+    .string { color: #032f62; }
+    .comment { color: #6a737d; }
+    .number { color: #005cc5; }
+    .function { color: #6f42c1; }
+  }
+  
+  // Selection colors
+  ::selection {
+    background: rgba(102, 126, 234, 0.2);
+    color: var(--text-primary);
+  }
+  
+  ::-moz-selection {
+    background: rgba(102, 126, 234, 0.2);
+    color: var(--text-primary);
+  }
+}
